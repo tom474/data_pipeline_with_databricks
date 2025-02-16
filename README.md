@@ -1,6 +1,6 @@
 # Data Pipeline with Databricks  
 
-A **scalable data pipeline** built using **Databricks, Apache Spark, and MongoDB** to process, transform, and analyze electricity and gas consumption data. The pipeline enables efficient data ingestion, cleaning, transformation, machine learning modeling, and visualization.
+A **big data processing pipeline** leveraging **Databricks, Spark, and MongoDB** to perform **data ingestion, transformation, machine learning, and visualization** for electricity and gas consumption analysis.  
 
 ## Tech Stack  
 
@@ -12,23 +12,24 @@ A **scalable data pipeline** built using **Databricks, Apache Spark, and MongoDB
 ## Features  
 
 ### 1. Data Ingestion  
-- Extracts electricity and gas consumption data from MongoDB.  
-- Loads raw data into PySpark **DataFrames** for preprocessing.  
+- Loads electricity and gas consumption data into **MongoDB**.  
+- Reads and processes data in **PySpark DataFrames** for structured analysis.  
 
 ### 2. Data Cleaning and Transformation  
-- Handles **missing values** by dropping irrelevant columns.  
-- Removes **redundant features** with low variance or high cardinality.  
-- Applies **log transformation** to mitigate skewness in numerical data.  
-- Uses **one-hot encoding** for categorical variables.  
-- Normalizes numerical features using **Min-Max scaling**.  
+- Handles **missing values**, **removes redundant columns**, and **normalizes numerical data**.  
+- Performs **outlier detection and transformation** using logarithmic scaling.  
+- Applies **one-hot encoding** for categorical variables.  
 
-### 3. Model Training and Tracking  
-- Trains **separate regression models** for **electricity and gas consumption**.  
-- Implements **Random Forest** and **Decision Tree Regressors**.  
-- Uses **MLflow** for **experiment tracking, model versioning, and metric logging**.  
-- Selects **best-performing models** based on **MAE, R2, and RMSE** scores.  
+### 3. Machine Learning Model Training  
+- Builds **separate models** for **electricity** and **gas** consumption prediction.  
+- Implements **Random Forest Regressor** and **Decision Tree Regressor** for analysis.  
+- Tracks experiments using **MLflow**, logging **model metrics and hyperparameters**.  
+- Best models selected:  
+  - **Electricity**: Random Forest Regressor (`numTrees=30`, `maxDepth=7`).  
+  - **Gas**: Decision Tree Regressor (`maxDepth=7`, `minInstancesPerNode=2`).  
 
 ### 4. Data Visualization  
-- Creates **interactive dashboards** using MongoDB Charts.  
-- Visualizes **top energy-consuming cities, distribution by connection type, and yearly trends**.  
-- Provides **public MongoDB dashboard** for dynamic exploration.  
+- **MongoDB Charts Dashboard** for interactive analytics:  
+  - **Top 10 Cities by Electricity & Gas Consumption**.  
+  - **Electricity & Gas Consumption by Connection Type**.  
+- View dashboard: [MongoDB Charts](https://charts.mongodb.com/charts-bigdataasm2-szigrao/public/dashboards/67724c59-0c78-4054-8e6b-1061df46332b).  
