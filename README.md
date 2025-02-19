@@ -67,7 +67,7 @@ This project focuses on building a data pipeline using **Databricks**, **PySpark
 - Choose the databricks runtime version: **9.1 LTS ML (Scala 2.12, Spark 3.1.2)**.
 - Select **Create compute**.
 
-![task0-create-cluster.png](https://github.com/tom474/mongodb_and_spark/blob/main/assets/task0-create-cluster.png?raw=true)
+![task0-create-cluster.png](https://github.com/tom474/data_pipeline_with_databricks/blob/main/assets/task0-attach-cluster.png?raw=true)
 
 ### Install mongodb spark connector library
 - On the navigation bar, select **Libraries**.
@@ -78,11 +78,11 @@ This project focuses on building a data pipeline using **Databricks**, **PySpark
 - Search and select **mongo-spark** with version **3.0.1**.
 - Select **Install**.
 
-![task0-install-library.png](https://github.com/tom474/mongodb_and_spark/blob/main/assets/task0-install-library.png?raw=true)
+![task0-install-library.png](https://github.com/tom474/data_pipeline_with_databricks/blob/main/assets/task0-install-library.png?raw=true)
 
 ### Attach cluster to notebook
 - Import the notebook to databricks using `.dbc` or `.ipynb` file.
 - Select the notebook.
 - For the Connect, select the created cluster.
 
-![task0-attach-cluster.png](https://github.com/tom474/mongodb_and_spark/blob/main/assets/task0-attach-cluster.png?raw=true)
+![task0-attach-cluster.png](https://github.com/tom474/data_pipeline_with_databricks/blob/main/assets/task0-attach-cluster.png?raw=true)
